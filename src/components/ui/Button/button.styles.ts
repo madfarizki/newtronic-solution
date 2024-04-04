@@ -11,7 +11,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
   width: ${({ width }) => width || "fit-content"};
   height: ${({ height }) => height || "fit-content"};
   font-size: ${({ size }) => getSizeFontSize(size)};
-  font-family: Poppins, sans-serif;
+  font-family: Poppins-SemiBold, sans-serif;
   padding: ${({ size }) => getSizePadding(size)};
 
   &:focus {
@@ -69,6 +69,17 @@ const getVariantStyles = (variant: ButtonVariant, theme: any) => {
           border: 1px solid ${theme.colors.primary.focus};
         }
       `;
+    case ButtonVariant.OUTLINED:
+      return `
+          color: ${theme.colors.neutral.neutral100};
+          background-color: ${theme.colors.neutral.neutral10};
+          border: 1px solid ${theme.colors.primary.border};
+  
+          &:hover {
+            background-color: ${theme.colors.neutral.neutral30};
+            border: 1px solid ${theme.colors.neutral.neutral30};
+          }
+        `;
     default:
       return "";
   }

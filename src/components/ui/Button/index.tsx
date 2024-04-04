@@ -3,6 +3,7 @@ import { ButtonStyle } from "./button.styles";
 
 export enum ButtonVariant {
   PRIMARY = "primary",
+  OUTLINED = "outlined",
 }
 
 export type ButtonSize = "s" | "m" | "l" | "xl" | "auto";
