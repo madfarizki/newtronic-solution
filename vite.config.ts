@@ -12,6 +12,7 @@ export default defineConfig({
       "@/components": path.resolve(dirName, "src/components/"),
       "@/consts": path.resolve(dirName, "src/consts/"),
       "@/assets": path.resolve(dirName, "src/assets/"),
+      "@/utils": path.resolve(dirName, "src/utils/"),
     },
   },
   server: {

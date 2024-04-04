@@ -1,14 +1,14 @@
 import Breakpoints from "@/consts/breakpoints";
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.section<{ background: string }>`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 80px;
   height: 50vh;
-  background: url("https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg");
+  background: ${({ background }) => `url(${background})`};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

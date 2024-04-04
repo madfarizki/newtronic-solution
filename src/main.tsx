@@ -5,6 +5,7 @@ import "./index.css";
 import "./assets/fonts/main.css";
 import { ThemeProvider } from "styled-components";
 import Colors from "@/consts/colors";
+import { Provider } from "./utils/context/DataContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -14,7 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           ...Colors,
         },
       }}>
-      <App />
+      <Provider>
+        <App />
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 );

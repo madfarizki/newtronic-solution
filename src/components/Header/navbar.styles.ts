@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+import Breakpoints from "@/consts/breakpoints";
 
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary.default};
@@ -35,7 +36,6 @@ export const Logo = styled(LinkR)`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
 `;
@@ -82,5 +82,13 @@ export const NavLinks = styled(LinkS)`
 
   &:hover {
     border-bottom: 2px solid ${({ theme }) => theme.colors.primary.default};
+  }
+`;
+
+export const Image = styled.img`
+  width: 260px;
+
+  @media screen and (max-width: ${Breakpoints.tablet}px) {
+    width: 180px;
   }
 `;

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import MenuMobile from "./components/MenuMobile";
-import { Nav, Container, Logo, MenuIcon, NavMenu, NavItem, NavLinks } from "./navbar.styles";
+import { Nav, Container, Logo, MenuIcon, NavMenu, NavItem, NavLinks, Image } from "./navbar.styles";
 import { FaBars } from "react-icons/fa";
+import { useDataContext } from "@/utils/context/DataContext";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { data } = useDataContext();
+
+  const { logo } = data?.[0] || {};
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -12,7 +16,9 @@ function Header() {
   return (
     <Nav>
       <Container>
-        <Logo to="/">Newtronic</Logo>
+        <Logo to="/">
+          <Image src={logo} />
+        </Logo>
         <MenuIcon onClick={toggle}>
           <FaBars />
         </MenuIcon>

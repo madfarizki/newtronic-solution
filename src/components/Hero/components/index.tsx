@@ -3,14 +3,18 @@ import { Container } from "./about.styles";
 import { useTheme } from "styled-components";
 import { ButtonVariant } from "@/components/ui/Button";
 import Breakpoints from "@/consts/breakpoints";
+import { useDataContext } from "@/utils/context/DataContext";
 
 function About() {
   const theme = useTheme();
+  const { data, loading } = useDataContext();
+
+  const { title, description, banner } = data?.[0] || [];
 
   const width = window.innerWidth;
 
   return (
-    <Container>
+    <Container background={banner}>
       <FlexContainer
         flexDirection={width < Breakpoints.tablet ? "column" : "row"}
         flexWrap={false}
@@ -19,10 +23,10 @@ function About() {
         gap={8}>
         <FlexContainer flexDirection="column" width="80%" gap={8}>
           <TextBold size="h-l" color={theme?.colors.primary.default}>
-            Education newtronic
+            {title}
           </TextBold>
           <Text size="h-s" color={theme?.colors.neutral.neutral100}>
-            Aplikasi dalam bidang pendidikan yang dikembangkan oleh perusahaan newtronic
+            {description}
           </Text>
           <Text size="h-s" color={theme?.colors.neutral.neutral100}>
             Temukan inovasi terbaru dari Newtronic di bidang teknologi pendidikan melalui aplikasi
