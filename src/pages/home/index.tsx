@@ -1,9 +1,10 @@
-import { Header } from "@/components/index";
+import { Header, Hero } from "@/components/index";
 
 function Home() {
   return (
     <>
       <Header />
+      <Hero />
     </>
   );
 }

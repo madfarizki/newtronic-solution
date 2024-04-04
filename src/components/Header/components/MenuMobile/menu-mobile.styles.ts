@@ -8,7 +8,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: #0d0d0d;
+  background-color: ${({ theme }) => theme.colors.primary.default};
   display: grid;
   align-items: center;
   top: 0;
@@ -19,7 +19,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.neutral.neutral10};
 `;
 
 export const Icon = styled.div`
@@ -33,7 +33,7 @@ export const Icon = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.neutral.neutral10};
 `;
 
 export const MenuList = styled.ul`
@@ -61,10 +61,10 @@ export const MenuLink = styled(LinkS)`
   list-style: none;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.neutral.neutral10};
 
   &:hover {
-    color: #01bf71;
+    color: ${({ theme }) => theme.colors.secondary.hover};
     transition: 0.2s ease-in-out;
   }
 `;

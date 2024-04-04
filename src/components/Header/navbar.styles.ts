@@ -29,7 +29,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled(LinkR)`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.neutral.neutral10};
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -51,7 +51,7 @@ export const MenuIcon = styled.div`
     transform: translate(-100%, 80%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.neutral.neutral10};
   }
 `;
 
@@ -72,7 +72,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.neutral.neutral10};
   display: flex;
   align-items: center;
   text-decoration: none;
