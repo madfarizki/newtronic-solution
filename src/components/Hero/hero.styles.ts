@@ -15,12 +15,19 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: 100px 30px;
+  justify-content: center;
   max-width: 1024px;
   height: 100vh;
   position: relative;
   margin: auto;
   z-index: 1;
+  padding: 40px 0 0;
+
+  @media screen and (max-width: ${Breakpoints.tablet}px) {
+    padding: 80px 20px 0;
+    justify-content: start;
+    height: calc(100vh - 80px);
+  }
 `;
 
 export const Chip = styled.div`
@@ -36,9 +43,16 @@ export const Chip = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  padding: 24px 0;
-
   @media screen and (min-width: ${Breakpoints.desktop}px) {
-    padding: 18px 58px;
+    padding: 0 58px;
+  }
+`;
+
+export const Image = styled.img`
+  margin: 30px auto 0;
+  width: 50%;
+
+  @media screen and (max-width: ${Breakpoints.desktop}px) {
+    width: 100%;
   }
 `;

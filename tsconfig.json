@@ -9,7 +9,8 @@
     "types": ["node"],
     "paths": {
       "@/components/*": ["src/components/*"],
-      "@/consts/*": ["src/consts/*"]
+      "@/consts/*": ["src/consts/*"],
+      "@/assets/*": ["src/assets/*"]
     },
 
     /* Bundler mode */
