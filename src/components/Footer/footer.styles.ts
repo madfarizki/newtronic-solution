@@ -9,6 +9,11 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${Breakpoints.tablet}px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const Logo = styled(LinkR)`
