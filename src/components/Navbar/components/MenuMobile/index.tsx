@@ -22,7 +22,12 @@ function MenuMobile({ isOpen, toggle }: Props) {
       <Wrapper>
         <MenuList>
           <MenuItem>
-            <MenuLink to="home">Home</MenuLink>
+            <MenuLink to="/">Home</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink to="section-about" smooth duration={100}>
+              About
+            </MenuLink>
           </MenuItem>
         </MenuList>
       </Wrapper>

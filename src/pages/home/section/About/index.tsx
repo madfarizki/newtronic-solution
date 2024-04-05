@@ -14,7 +14,7 @@ function About() {
   const width = window.innerWidth;
 
   return (
-    <Container background={banner}>
+    <Container background={banner} id="section-about">
       <FlexContainer
         flexDirection={width < Breakpoints.tablet ? "column" : "row"}
         flexWrap={false}

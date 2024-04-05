@@ -26,7 +26,6 @@ export const Container = styled.section`
   @media screen and (max-width: ${Breakpoints.tablet}px) {
     padding: 80px 20px 0;
     justify-content: start;
-    height: calc(100vh - 80px);
   }
 `;
 

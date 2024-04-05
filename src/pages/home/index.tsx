@@ -1,10 +1,12 @@
-import { Header, Hero } from "@/components/index";
+import { Navbar } from "@/components/index";
+import { Hero, About } from "./section/index";
 
 function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Hero />
+      <About />
     </>
   );
 }

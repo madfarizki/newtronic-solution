@@ -3,7 +3,8 @@ import MenuMobile from "./components/MenuMobile";
 import { Nav, Container, Logo, MenuIcon, NavMenu, NavItem, NavLinks, Image } from "./navbar.styles";
 import { FaBars } from "react-icons/fa";
 import { useDataContext } from "@/utils/context/DataContext";
-function Header() {
+
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { data } = useDataContext();
 
@@ -24,7 +25,12 @@ function Header() {
         </MenuIcon>
         <NavMenu>
           <NavItem>
-            <NavLinks to="home">Home</NavLinks>
+            <NavLinks to="/">Home</NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="section-about" smooth duration={100}>
+              About
+            </NavLinks>
           </NavItem>
         </NavMenu>
         <MenuMobile isOpen={isOpen} toggle={toggle} />
@@ -33,4 +39,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;
