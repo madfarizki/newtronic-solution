@@ -12,7 +12,7 @@ type PlaylistItem = {
   updated_at: string;
 };
 
-type DataItem = {
+export type ResponseData = {
   id: number;
   title: string;
   description: string;
@@ -23,18 +23,13 @@ type DataItem = {
   playlist: PlaylistItem[];
 };
 
-export type ResponseData = {
-  data: DataItem[];
-  status: number;
-};
-
 interface DataContextType {
   data: ResponseData;
   loading: boolean;
 }
 
 const initialDataContext: DataContextType = {
-  data: { data: [], status: 0 },
+  data: [{ data: [] }],
   loading: true,
 };
 
@@ -54,7 +49,7 @@ export function Provider({ children }: ProviderProps) {
     const fetchData = async () => {
       try {
         const fetchedData = await fetchAllData();
-        setData(fetchedData);
+        setData(fetchedData[0]);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);

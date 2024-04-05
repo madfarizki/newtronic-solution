@@ -7,9 +7,9 @@ import { useDataContext } from "@/utils/context/DataContext";
 
 function About() {
   const theme = useTheme();
-  const { data, loading } = useDataContext();
+  const { data } = useDataContext();
 
-  const { title, description, banner } = data?.[0] || [];
+  const { title, description, banner } = data || [];
 
   const width = window.innerWidth;
 

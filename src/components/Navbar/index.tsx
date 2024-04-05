@@ -8,7 +8,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { data } = useDataContext();
 
-  const { logo } = data?.[0] || {};
+  const { logo } = data || {};
 
   const toggle = () => {
     setIsOpen(!isOpen);

@@ -6,7 +6,7 @@ export const Container = styled.section<{ background: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 80px;
+  padding: 40px 120px;
   height: 50vh;
   background: ${({ background }) => `url(${background})`};
   background-size: cover;

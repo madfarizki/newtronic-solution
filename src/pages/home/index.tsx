@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/index";
-import { Hero, About } from "./section/index";
+import { Hero, About, Playlist } from "./section/index";
 
 function Home() {
   return (
@@ -7,6 +7,7 @@ function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Playlist />
     </>
   );
 }
