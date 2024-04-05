@@ -55,3 +55,29 @@ export const Image = styled.img`
     width: 100%;
   }
 `;
+
+export const VideoPopupContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const PopupContent = styled.div``;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.secondary.default};
+
+  svg {
+    color: ${({ theme }) => theme.colors.neutral.neutral100};
+    font-size: 24px;
+  }
+`;

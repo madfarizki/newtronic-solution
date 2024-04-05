@@ -3,6 +3,7 @@ import { FooterContainer, Logo, SocialMedia, SocialLink, Image } from "./footer.
 import { TextSemibold } from "@/components/index";
 import { useTheme } from "styled-components";
 import { FaGithub, FaGlobe, FaPhone } from "react-icons/fa";
+import LogoImg from "@/assets/images/logo.png";
 
 function Footer() {
   const { data } = useDataContext();
@@ -13,7 +14,7 @@ function Footer() {
   return (
     <FooterContainer>
       <Logo to="/">
-        <Image src={logo} />
+        <Image src={logo ? logo : LogoImg} />
       </Logo>
       <TextSemibold color={theme?.colors?.neutral.neutral10}>
         &copy; {new Date().getFullYear()} Newtronic Solution

@@ -22,7 +22,7 @@ function MenuMobile({ isOpen, toggle }: Props) {
       <Wrapper>
         <MenuList>
           <MenuItem>
-            <MenuLink to="/" onClick={toggle}>
+            <MenuLink to="home" onClick={toggle}>
               Home
             </MenuLink>
           </MenuItem>

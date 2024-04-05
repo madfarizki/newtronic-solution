@@ -1,4 +1,4 @@
-import { Card, FlexContainer, TextBold } from "@/components/index";
+import { Card, FlexContainer, Text, TextBold } from "@/components/index";
 
 import { Container } from "./playlist.styles";
 import { useDataContext } from "@/utils/context/DataContext";
@@ -29,6 +29,12 @@ function Playlist() {
         {data?.playlist?.map((item) => (
           <Card key={item?.id} {...item} />
         ))}
+        {data?.length ? (
+          <Text size="xl">
+            Unable to fetch data due to CORS policy. For security reasons, APIs must be accessed
+            over HTTPS
+          </Text>
+        ) : null}
       </FlexContainer>
     </Container>
   );

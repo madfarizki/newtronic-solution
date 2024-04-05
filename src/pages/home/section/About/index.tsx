@@ -13,6 +13,10 @@ function About() {
 
   const width = window.innerWidth;
 
+  const handleCall = () => {
+    window.location.href = "tel:+62227234248";
+  };
+
   return (
     <Container background={banner} id="section-about">
       <FlexContainer
@@ -23,7 +27,7 @@ function About() {
         gap={8}>
         <FlexContainer flexDirection="column" width="80%" gap={8}>
           <TextBold size="h-l" color={theme?.colors.primary.default}>
-            {title}
+            {title ? title : "Newtronic Solution"}
           </TextBold>
           <Text size="h-s" color={theme?.colors.neutral.neutral100}>
             {description}
@@ -35,7 +39,7 @@ function About() {
             tingkat pendidikan.
           </Text>
         </FlexContainer>
-        <Button size="xl" variant={ButtonVariant.PRIMARY} width="auto">
+        <Button onClick={handleCall} size="xl" variant={ButtonVariant.PRIMARY} width="auto">
           Contact Us
         </Button>
       </FlexContainer>
