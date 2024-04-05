@@ -12,7 +12,7 @@ function Playlist() {
   const width = window.innerWidth;
 
   return (
-    <Container>
+    <Container id="section-playlist">
       <TextBold
         size="h-l"
         color={theme?.colors?.primary.default}

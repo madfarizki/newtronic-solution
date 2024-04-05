@@ -81,7 +81,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &:hover {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.primary.default};
+    border-bottom: 4px solid ${({ theme }) => theme.colors.secondary.default};
   }
 `;
 

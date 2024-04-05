@@ -22,11 +22,18 @@ function MenuMobile({ isOpen, toggle }: Props) {
       <Wrapper>
         <MenuList>
           <MenuItem>
-            <MenuLink to="/">Home</MenuLink>
+            <MenuLink to="/" onClick={toggle}>
+              Home
+            </MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="section-about" smooth duration={100}>
+            <MenuLink to="section-about" smooth duration={100} onClick={toggle}>
               About
+            </MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink to="section-playlist" smooth duration={100} onClick={toggle}>
+              Playlists
             </MenuLink>
           </MenuItem>
         </MenuList>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
-import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Container = styled.div<{ isOpen: boolean }>`
@@ -41,6 +40,7 @@ export const MenuList = styled.ul`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
   text-align: center;
+  padding: 0;
 
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);

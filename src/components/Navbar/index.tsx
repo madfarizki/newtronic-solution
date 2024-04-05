@@ -32,6 +32,11 @@ function Navbar() {
               About
             </NavLinks>
           </NavItem>
+          <NavItem>
+            <NavLinks to="section-playlist" smooth duration={100}>
+              Playlists
+            </NavLinks>
+          </NavItem>
         </NavMenu>
         <MenuMobile isOpen={isOpen} toggle={toggle} />
       </Container>
