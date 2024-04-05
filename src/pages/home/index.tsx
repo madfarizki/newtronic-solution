@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/index";
+import { Footer, Navbar } from "@/components/index";
 import { Hero, About, Playlist } from "./section/index";
 
 function Home() {
@@ -8,6 +8,7 @@ function Home() {
       <Hero />
       <About />
       <Playlist />
+      <Footer />
     </>
   );
 }
